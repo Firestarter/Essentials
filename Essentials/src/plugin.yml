@@ -9,22 +9,22 @@ softdepend: [Vault, LuckPerms]
 authors: [Zenexer, ementalo, Aelux, Brettflan, KimKandor, snowleo, ceulemans, Xeology, KHobbits, md_5, Iaccidentally, drtshock, vemacs, SupaHam, md678685]
 api-version: "1.13"
 commands:
-  afk:
-    description: Marks you as away-from-keyboard.
-    usage: /<command> [player/message...]
-    aliases: [eafk,away,eaway]
-  antioch:
-    description: 'A little surprise for operators.'
-    usage: /<command> [message]
-    aliases: [eantioch,grenade,egrenade,tnt,etnt]
+#  afk:
+#    description: Marks you as away-from-keyboard.
+#    usage: /<command> [player/message...]
+#    aliases: [eafk,away,eaway]
+#  antioch:
+#    description: 'A little surprise for operators.'
+#    usage: /<command> [message]
+#    aliases: [eantioch,grenade,egrenade,tnt,etnt]
   back:
     description: Teleports you to your location prior to tp/spawn/warp.
     usage: /<command> [player]
     aliases: [eback,return,ereturn]
-  backup:
-    description: Runs the backup if configured.
-    usage: /<command>
-    aliases: [ebackup]
+#  backup:
+#    description: Runs the backup if configured.
+#    usage: /<command>
+#    aliases: [ebackup]
   balance:
     description: States the current balance of a player.
     usage: /<command> [player]
@@ -104,10 +104,10 @@ commands:
     description: Deletes the specified kit.
     usage: /<command> <kit>
     aliases: [edelkit,remkit,eremkit,rmkit,ermkit,deletekit,edeletekit]
-  delwarp:
-    description: Deletes the specified warp.
-    usage: /<command> <warp>
-    aliases: [edelwarp,remwarp,eremwarp,rmwarp,ermwarp]
+#  delwarp:
+#    description: Deletes the specified warp.
+#    usage: /<command> <warp>
+#    aliases: [edelwarp,remwarp,eremwarp,rmwarp,ermwarp]
   depth:
     description: States current depth, relative to sea level.
     usage: /depth
@@ -188,10 +188,10 @@ commands:
     description: Views a list of available commands.
     usage: /<command> [search term] [page]
     aliases: [ehelp]
-  helpop:
-    description: Message online admins.
-    usage: /<command> <message>
-    aliases: [ac,eac,amsg,eamsg,ehelpop]
+#  helpop:
+#    description: Message online admins.
+#    usage: /<command> <message>
+#    aliases: [ac,eac,amsg,eamsg,ehelpop]
   home:
     description: Teleport to your home.
     usage: /<command> [player:][name]
@@ -200,10 +200,10 @@ commands:
     description: Ignore or unignore other players.
     usage: /<command> <player>
     aliases: [eignore,unignore,eunignore,delignore,edelignore,remignore,eremignore,rmignore,ermignore]
-  info:
-    description: Shows information set by the server owner.
-    usage: /<command> [chapter] [page]
-    aliases: [about,eabout,ifo,eifo,einfo,inform,einform,news,enews]
+#  info:
+#    description: Shows information set by the server owner.
+#    usage: /<command> [chapter] [page]
+#    aliases: [about,eabout,ifo,eifo,einfo,inform,einform,news,enews]
   invsee:
     description: See the inventory of other players.
     usage: /<command> <player>
@@ -212,10 +212,10 @@ commands:
     description: Spawn an item.
     usage: /<command> <item|numeric> [amount [itemmeta...]]
     aliases: [i,eitem,ei]
-  itemdb:
-    description: Searches for an item.
-    usage: /<command> <item>
-    aliases: [dura,edura,durability,edurability,eitemdb,itemno,eitemno]
+#  itemdb:
+#    description: Searches for an item.
+#    usage: /<command> <item>
+#    aliases: [dura,edura,durability,edurability,eitemdb,itemno,eitemno]
   itemlore:
     description: Edit the lore of an item.
     usage: /<command> <add/set/clear> [text/line] [text]
@@ -264,10 +264,10 @@ commands:
     description: Manages inter-player, intra-server mail.
     usage: /<command> [read|clear|send [to] [message]|sendall [message]]
     aliases: [email,eemail,memo,ememo]
-  me:
-    description: Describes an action in the context of the player.
-    usage: /<command> <description>
-    aliases: [action,eaction,describe,edescribe,eme]
+#  me:
+#    description: Describes an action in the context of the player.
+#    usage: /<command> <description>
+#    aliases: [action,eaction,describe,edescribe,eme]
   more:
     description: Fills the item stack in hand to specified amount, or to maximum size if none is specified.
     usage: /<command> [amount]
@@ -296,10 +296,10 @@ commands:
     description: Change your nickname or that of another player.
     usage: /<command> [player] <nickname|off>
     aliases: [enick,nickname,enickname]
-  nuke:
-    description: May death rain upon them.
-    usage: /<command> [player]
-    aliases: [enuke]
+#  nuke:
+#    description: May death rain upon them.
+#    usage: /<command> [player]
+#    aliases: [enuke]
   tpoffline:
     description: Teleport to a player's last known logout location
     usage: /<command> <player>
@@ -316,10 +316,10 @@ commands:
     description: Toggles whether you are prompted to confirm payments.
     usage: /<command>
     aliases: [epayconfirmtoggle, payconfirmoff, epayconfirmoff, payconfirmon, epayconfirmon, payconfirm, epayconfirm]
-  ping:
-    description: Pong!
-    usage: /<command>
-    aliases: [echo,eecho,eping,pong,epong]
+#  ping:
+#    description: Pong!
+#    usage: /<command>
+#    aliases: [echo,eecho,eping,pong,epong]
   potion:
     description: Adds custom potion effects to a potion.
     usage: /<command> <clear|apply|effect:<effect> power:<power> duration:<duration>>
@@ -376,14 +376,14 @@ commands:
     description: Shows the last logout time of a player.
     usage: /<command> <playername>
     aliases: [eseen]
-  sell:
-    description: Sells the item currently in your hand.
-    usage: /<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]
-    aliases: [esell]
+#  sell:
+#    description: Sells the item currently in your hand.
+#    usage: /<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]
+#    aliases: [esell]
   sethome:
     description: Set your home to your current location.
     usage: /<command> [[player:]name]
-    aliases: [esethome,createhome,ecreatehome]
+    aliases: [createhome,ecreatehome]
   setjail:
     description: Creates a jail where you specified named [jailname].
     usage: /<command> <jailname>
@@ -392,10 +392,10 @@ commands:
     description: Set the random teleport location and parameters.
     usage: /<command> [center|minrange|maxrange] [value]
     aliases: [esettpr, settprandom, esettprandom]
-  setwarp:
-    description: Creates a new warp.
-    usage: /<command> <warp>
-    aliases: [createwarp,ecreatewarp,esetwarp]
+#  setwarp:
+#    description: Creates a new warp.
+#    usage: /<command> <warp>
+#    aliases: [createwarp,ecreatewarp,esetwarp]
   setworth:
     description: Set the sell value of an item.
     usage: /<command> [itemname|id] <price>
@@ -540,10 +540,10 @@ commands:
     description: Hide yourself from other players.
     usage: /<command> [player] [on|off]
     aliases: [v,ev,evanish]
-  warp:
-    description: List all warps or warp to the specified location.
-    usage: /<command> <pagenumber|warp> [player]
-    aliases: [ewarp,warps,ewarps]
+#  warp:
+#    description: List all warps or warp to the specified location.
+#    usage: /<command> <pagenumber|warp> [player]
+#    aliases: [ewarp,warps,ewarps]
   weather:
     description: Sets the weather.
     usage: /<command> <storm/sun> [duration]
@@ -560,10 +560,10 @@ commands:
     description: Switch between worlds.
     usage: /<command> [world]
     aliases: [eworld]
-  worth:
-    description: Calculates the worth of items in hand or as specified.
-    usage: /<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]
-    aliases: [eprice,price,eworth]
+#  worth:
+#    description: Calculates the worth of items in hand or as specified.
+#    usage: /<command> <<itemname>|<id>|hand|inventory|blocks> [-][amount]
+#    aliases: [eprice,price,eworth]
 
 permissions:
   essentials.*:
