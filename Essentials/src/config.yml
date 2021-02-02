@@ -563,6 +563,11 @@ last-message-reply-recipient: true
 # Default is 180 (3 minutes)
 last-message-reply-recipient-timeout: 180
 
+# Changes the default /reply functionality.
+# If true, /reply will not check if the person you're replying to has vanished.
+# If false, players will not be able to /reply to players who they can no longer see due to vanish.
+last-message-reply-vanished: false
+
 # Toggles whether or not left clicking mobs with a milk bucket turns them into a baby.
 milk-bucket-easter-egg: true
 
@@ -789,6 +794,7 @@ chat:
   # Chat formatting can be done in two ways, you can either define a standard format for all chat.
   # Or you can give a group specific chat format, to give some extra variation.
   # For more information of chat formatting, check out the wiki: http://wiki.ess3.net/wiki/Chat_Formatting
+  # Note: Using the {PREFIX} and {SUFFIX} placeholders along with {DISPLAYNAME} may cause double prefixes/suffixes to be shown in chat unless add-prefix-suffix is uncommented and set to false.
 
   format: '<{DISPLAYNAME}> {MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
@@ -992,7 +998,7 @@ protect:
     # Which blocks should people be prevented from breaking?
     break:
 
-    # Which blocks should not be pushed by pistons?
+    # Which blocks should not be moved by pistons?
     piston:
 
     # Which blocks should not be dispensed by dispensers

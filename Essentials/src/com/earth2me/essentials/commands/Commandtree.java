@@ -24,7 +24,7 @@ public class Commandtree extends EssentialsCommand {
         if (args.length < 1) {
             throw new NotEnoughArgumentsException();
         } else {
-            for (TreeType type : TreeType.values()) {
+            for (final TreeType type : TreeType.values()) {
                 if (type.name().replace("_", "").equalsIgnoreCase(args[0])) {
                     tree = type;
                     break;
@@ -32,10 +32,6 @@ public class Commandtree extends EssentialsCommand {
             }
             if (args[0].equalsIgnoreCase("jungle")) {
                 tree = TreeType.SMALL_JUNGLE;
-            } else if (args[0].equalsIgnoreCase("acacia")) {
-                tree = TreeType.ACACIA;
-            } else if (args[0].equalsIgnoreCase("birch")) {
-                tree = TreeType.BIRCH;
             }
             if (tree == null) {
                 throw new NotEnoughArgumentsException();
@@ -43,7 +39,7 @@ public class Commandtree extends EssentialsCommand {
         }
 
         final Location loc = LocationUtil.getTarget(user.getBase()).add(0, 1, 0);
-        if (!user.getWorld().getBlockAt(loc).isPassable()) {
+        if (loc.getBlock().getType().isSolid()) {
             throw new Exception(tl("treeFailure"));
         }
 
@@ -55,10 +51,10 @@ public class Commandtree extends EssentialsCommand {
     }
 
     @Override
-    protected List<String> getTabCompleteOptions(Server server, User user, String commandLabel, String[] args) {
+    protected List<String> getTabCompleteOptions(final Server server, final User user, final String commandLabel, final String[] args) {
         if (args.length == 1) {
-            List<String> options = Lists.newArrayList();
-            for (TreeType type : TreeType.values()) {
+            final List<String> options = Lists.newArrayList();
+            for (final TreeType type : TreeType.values()) {
                 options.add(type.name().toLowerCase(Locale.ENGLISH).replace("_", ""));
             }
             return options;

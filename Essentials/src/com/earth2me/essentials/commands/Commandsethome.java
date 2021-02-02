@@ -14,7 +14,6 @@ import java.util.concurrent.TimeUnit;
 
 import static com.earth2me.essentials.I18n.tl;
 
-
 public class Commandsethome extends EssentialsCommand {
     public Commandsethome() {
         super("sethome");
@@ -69,13 +68,13 @@ public class Commandsethome extends EssentialsCommand {
 
     }
 
-    private boolean checkHomeLimit(final User user, final User usersHome, String name) throws Exception {
+    private boolean checkHomeLimit(final User user, final User usersHome, final String name) throws Exception {
         if (!user.isAuthorized("essentials.sethome.multiple.unlimited")) {
-            int limit = ess.getSettings().getHomeLimit(user);
-            if (usersHome.getHomes().size() == limit && usersHome.getHomes().contains(name)) {
-                return false;
-            }
+            final int limit = ess.getSettings().getHomeLimit(user);
             if (usersHome.getHomes().size() >= limit) {
+                if (usersHome.getHomes().contains(name)) {
+                    return false;
+                }
                 throw new Exception(tl("maxHomes", ess.getSettings().getHomeLimit(user)));
             }
             return limit == 1;

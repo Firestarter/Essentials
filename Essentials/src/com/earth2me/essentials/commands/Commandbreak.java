@@ -8,7 +8,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 
 import static com.earth2me.essentials.I18n.tl;
 
-
 public class Commandbreak extends EssentialsCommand {
     public Commandbreak() {
         super("break");
@@ -18,7 +17,7 @@ public class Commandbreak extends EssentialsCommand {
     @Override
     public void run(final Server server, final User user, final String commandLabel, final String[] args) throws Exception {
 
-        final Block block = user.getBase().getTargetBlock(null, 20);
+        final Block block = user.getTargetBlock(20);
         if (block.getType() == Material.AIR) {
             throw new NoChargeException();
         }
